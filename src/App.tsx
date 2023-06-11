@@ -10,8 +10,6 @@ const App: FC = () => {
   const handleSearch = async (input: string) => {
     try {
       const response: ArticleResponse[] = await getArticleAsync(input);
-      console.log(response);
-
       const data = response.map((item: ArticleResponse) => ({
         _id: item._id,
         abstract: item.abstract,
